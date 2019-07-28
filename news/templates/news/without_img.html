@@ -1,0 +1,20 @@
+<ul class="news-list">
+    {% for n in news %}
+    <div class="news_bx2">
+        <div class="text-wrapper">
+            <h4>
+                <a href="{{ n.news_link }}" target="_blank" rel="noopener noreferrer" title="{{ n.title }}">
+                    {{ n.title|truncatewords:10 }}
+                </a>
+            </h4>
+            <p class="text-right">
+                <small>
+                    <a href="{{ n.src_link }}" target="_blank" class="text-danger font-weight-bold">
+                        - {{ n.src_name }}
+                    </a>
+                </small>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</ul>
